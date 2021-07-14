@@ -1,0 +1,37 @@
+p {
+    background-color: beige;
+    color: black;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+    width: 30%;
+    height: 30%;
+}
+
+.tabela {
+    width: 50vw;
+    height: 50vh;
+    border: 2px solid black
+}
+
+.tabela>tr,
+td {
+    border: 1px solid black;
+    height: 20px;
+    width: 100px;
+    background-color: gray;
+}
+
+.RecebeModificacao {
+    width: 105px;
+    margin: 5px;
+    border: 1xp solid black;
+}
+
+.NaoRecebeModificacao {
+    width: 200px;
+    border: 1xp solid black;
+}
