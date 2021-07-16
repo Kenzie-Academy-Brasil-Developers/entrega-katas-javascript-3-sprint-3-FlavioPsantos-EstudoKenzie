@@ -1,37 +1,23 @@
-p {
-    background-color: beige;
-    color: black;
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10%;
-    width: 30%;
-    height: 30%;
+:root {
+    --tamanho-RetaguloMenor: 105px;
+    --tamanho-RetaguloMaior: 200px;
 }
 
-.tabela {
-    width: 50vw;
-    height: 50vh;
-    border: 2px solid black
-}
-
-.tabela>tr,
-td {
-    border: 1px solid black;
+.retangulo {
     height: 20px;
     width: 100px;
     background-color: gray;
+    margin: 1px;
 }
 
-.RecebeModificacao {
-    width: 105px;
-    margin: 5px;
-    border: 1xp solid black;
+.retaguloAcumulativo {
+    height: 20px;
+    background-color: gray;
+    margin: 1px;
 }
 
-.NaoRecebeModificacao {
-    width: 200px;
-    border: 1xp solid black;
+.retaguloArray {
+    height: 20px;
+    background-color: gray;
+    margin: 1px;
 }

@@ -1,5 +1,5 @@
 const sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535, 940, 472];
-const arrayResult = [];
+
 
 function showResults(valor) {
     const body = document.querySelector("body");
@@ -8,149 +8,180 @@ function showResults(valor) {
     elemento.appendChild(texto);
     body.appendChild(elemento);
 }
-// Exibir os números de 1 a 25: _(1, 2, 3, …, 24, 25)_
-function kata1(n) {
-    for (let i = 0; i <= n; i++) {
-        arrayResult.push(i)
-    }
-    return showResults(arrayResult);
-}
-// Exibir os números de 25 a 1: _(25, 24, 23, …, 2, 1)_
-function kata2(n) {
-    for (let i = n; i >= 1; i--) {
-        arrayResult.push(i)
-    }
-    return showResults(arrayResult);
-}
 
-// Exibir os números de -1 a -25: _(-1, -2, -3, …, -24, -25)_
-function kata3(n) {
-    for (let i = -1; i >= n; i--) {
-        arrayResult.push(i)
-    }
-    return showResults(arrayResult);
-}
-// Exibir os números de -25 a -1: _(-25, -24, -23, …, -2, -1)_
-function kata4(n) {
-    for (let i = n * -1; i <= -1; i++) {
-        arrayResult.push(i)
-    }
-    return showResults(arrayResult);
-}
-// Exibir os números ímpares de 25 a -25: _(25, 23, 21, …, -23, -25)_
-function kata5(n) {
+function kata1() {
 
-    for (let i = n; i >= (n * -1); i--) {
+    let outPut = []
+    for (let i = 1; i <= 25; i++) {
+        outPut.push(i)
+    }
+    return outPut;
+}
+showResults(kata1());
+
+function kata2() {
+
+    let outPut = []
+    for (let i = 25; i >= 1; i--) {
+        outPut.push(i)
+    }
+    return outPut
+}
+showResults(kata2());
+
+function kata3() {
+    let outPut = [];
+    for (let i = -1; i >= -25; i--) {
+        outPut.push(i)
+    }
+    return outPut;
+}
+showResults(kata3());
+
+function kata4() {
+    let outPut = []
+    for (let i = 25 * -1; i <= -1; i++) {
+        outPut.push(i)
+    }
+    return outPut
+}
+showResults(kata4());
+
+function kata5() {
+    let outPut = []
+    for (let i = 25; i >= (25 * -1); i--) {
         if (i % 2 !== 0) {
-            arrayResult.push(i)
+            outPut.push(i)
         }
     }
-    return showResults(arrayResult);
+    return outPut
 }
+showResults(kata5());
 
-// exibir os números divisíveis por 3 até o 100: _(3, 6, 9, …, 96, 99)_
-function kata6(n) {
-    for (let i = 0; i <= n; i++) {
+
+function kata6() {
+    let outPut = []
+    for (let i = 0; i <= 100; i++) {
         if (i % 3 === 0) {
-            arrayResult.push(i)
+            outPut.push(i)
         }
 
     }
-    return showResults(arrayResult);
+    return outPut
 }
-//Exibir os números divisíveis por 7 até o 100: _(7, 14, 21, …, 91, 98)_
-function kata7(n) {
-    for (let i = 0; i <= n; i++) {
+showResults(kata6());
+
+function kata7() {
+    let outPut = []
+    for (let i = 0; i <= 100; i++) {
         if (i % 7 === 0) {
-            arrayResult.push(i)
+            outPut.push(i)
         }
 
     }
-    return showResults(arrayResult);
+    return outPut
 }
-//Exibir os números divisíveis por 3 e os números divisíveis por 7 regressivamente a partir do 100: _(99, 98, 96, 93, 91, …, 14, 12, 9, 7, 6, 3)_
-function kata8(n) {
-    for (let i = n; i >= 3; i--) {
+showResults(kata7());
+
+
+function kata8() {
+    let outPut = []
+    for (let i = 100; i >= 3; i--) {
         if (i % 7 === 0 || i % 3 === 0) {
-            arrayResult.push(i)
+            outPut.push(i)
         }
 
     }
-    return showResults(arrayResult);
+    return outPut
 }
-//Exibir os números ímpares divisíveis por 5 até o 100: _(5, 15, 25, …, 85, 95)_
-function kata9(n) {
-    for (let i = 0; i <= n; i++) {
+showResults(kata8());
+
+function kata9() {
+    let outPut = []
+    for (let i = 1; i <= 100; i++) {
         if (i % 5 === 0 && i % 2 !== 0) {
-            arrayResult.push(i)
+            outPut.push(i)
         }
 
     }
-    return showResults(arrayResult);
+    return outPut
 }
-//Exibir os 20 elementos de sampleArray. _(469, 755, 244, …, 940, 472)_
-function kata10(n) {
-    for (let i = 0; i <= sampleArray.length; i++) {
-        arrayResult.push(sampleArray[i])
+showResults(kata9());
+
+
+function kata10() {
+    let outPut = []
+    for (let i = 0; i <= 20; i++) {
+        outPut.push(sampleArray[i])
 
     }
-    return showResults(arrayResult);
+    return outPut
 }
+showResults(kata10());
 
 function kata11() {
+    let outPut = []
     for (let i = 0; i <= sampleArray.length; i++) {
         if (sampleArray[i] % 2 === 0) {
-            arrayResult.push(sampleArray[i])
+            outPut.push(sampleArray[i])
         }
 
     }
-    return showResults(arrayResult);
+    return outPut
 }
+showResults(kata11());
+
 
 function kata12() {
+    let outPut = []
     for (let i = 0; i <= sampleArray.length; i++) {
         if (sampleArray[i] % 2 !== 0) {
-            arrayResult.push(sampleArray[i])
+            outPut.push(sampleArray[i])
         }
 
     }
-    return showResults(arrayResult);
+    return outPut
 }
+showResults(kata12());
+
 
 function kata13() {
+    let outPut = []
     for (let i = 0; i <= sampleArray.length; i++) {
         if (sampleArray[i] % 8 === 0) {
-            arrayResult.push(sampleArray[i])
+            outPut.push(sampleArray[i])
         }
 
     }
-    return showResults(arrayResult);
+    return outPut
 }
+showResults(kata13());
 
 function kata14() {
-    for (let i = 0; i <= sampleArray.length; i++) {
+    let outPut = []
+    for (let i = 0; i < sampleArray.length; i++) {
         let quadrado = sampleArray[i] * sampleArray[i];
-        arrayResult.push(quadrado);
+        outPut.push(quadrado);
     }
-    return showResults(arrayResult);
+    return outPut
 }
+showResults(kata14());
 
-function kata15(n) {
+function kata15() {
     let i = 1;
-    let result = n * (n + 1) / 2
-    return showResults(result);
+    let result = 20 * (20 + 1) / 2
+    return result;
 }
+showResults(kata15());
 
 function kata16() {
     let soma = 0;
-    for (let i = 0; i <= sampleArray.length; i++) {
+    for (let i = 0; i < sampleArray.length; i++) {
         soma += sampleArray[i];
-
     }
-    return showResults(soma);
-
-
+    return soma;
 }
+showResults(kata16())
 
 function kata17() {
     let atual = sampleArray[0]
@@ -161,10 +192,10 @@ function kata17() {
             menor = atual;
         }
     }
-    return showResults(menor);
-
-
+    return menor;
 }
+showResults(kata17());
+
 
 function kata18() {
     let atual = sampleArray[0]
@@ -175,71 +206,82 @@ function kata18() {
             maior = atual;
         }
     }
-    return showResults(maior);
+    return maior;
 
 }
+showResults(kata18());
+
 
 /**
  * Daqui em diante são os bônus, por sua conta e risco
  */
 
-function kataBonus1(l, c) {
+function kataBonus1() {
     const body = document.querySelector("body");
-    const elementoTable = document.createElement("table");
-    elementoTable.className = "tabela";
-    body.appendChild(elementoTable);
-    if (l > 0 && c > 0) {
-        for (let i = 0; i < l; i++) {
-            const linha = document.createElement("tr");
-            elementoTable.appendChild(linha);
-            for (let j = 0; j < c; j++) {
-                const coluna = document.createElement("td");
-                linha.appendChild(coluna);
-            }
-        }
-    } else {
-        alert("Número inválido")
+    for (let i = 0; i < 20; i++) {
+        const retangulo = document.createElement("div");
+        retangulo.className = "retangulo";
+        body.appendChild(retangulo);
     }
-
 
 
 }
 
-function kataBonus2(l, c) {
+function kataBonus2() {
+    let largura = 100;
     const body = document.querySelector("body");
-    const elementoTable = document.createElement("table");
-    elementoTable.className = "tabela";
-    body.appendChild(elementoTable);
-    if (l > 0 && c > 0) {
-        for (let i = 0; i < l; i++) {
-            if (i % 2 == 0) {
-                const linha = document.createElement("tr");
-                linha.className = "RecebeModificacao"
-                elementoTable.appendChild(linha);
-            } else {
-                const linha = document.createElement("tr");
-                linha.className = "NaoRecebeModificacao"
-                elementoTable.appendChild(linha);
-            }
-            for (let j = 0; j < c; j++) {
-                const coluna = document.createElement("td");
-                linha.appendChild(coluna);
-            }
-        }
-    } else {
-        alert("Número inválido")
+    for (let i = 0; i < 20; i++) {
+        const retangulo = document.createElement("div");
+        retangulo.className = "retaguloAcumulativo";
+        retangulo.style.width = largura + 5 + "px"
+        body.appendChild(retangulo);
+        largura += 5;
     }
 
 }
 
 function kataBonus3() {
-    // implemente o código do kata bonus 3 aqui
+    const body = document.querySelector("body");
+    for (let i = 0; i < 20; i++) {
+        const retangulo = document.createElement("div");
+        retangulo.className = "retaguloArray";
+        retangulo.style.width = sampleArray[i] + "px"
+        body.appendChild(retangulo);
+    }
 }
 
 function kataBonus4() {
-    // implemente o código do kata bonus 4 aqui
+    const body = document.querySelector("body");
+    for (let i = 0; i < 20; i++) {
+        const retangulo = document.createElement("div");
+        if (i % 2 == 0) {
+            retangulo.className = "retaguloArray";
+            retangulo.style.width = sampleArray[i] + "px"
+            retangulo.style.backgroundColor = "red";
+        } else {
+            retangulo.className = "retaguloArray";
+            retangulo.style.width = sampleArray[i] + "px"
+        }
+
+        body.appendChild(retangulo);
+
+    }
 }
 
 function kataBonus5() {
-    // implemente o código do kata bonus 5 aqui
+    const body = document.querySelector("body");
+    for (let i = 0; i < 20; i++) {
+        const retangulo = document.createElement("div");
+        if (sampleArray[i] % 2 == 0) {
+            retangulo.className = "retaguloArray";
+            retangulo.style.width = sampleArray[i] + "px"
+            retangulo.style.backgroundColor = "red";
+        } else {
+            retangulo.className = "retaguloArray";
+            retangulo.style.width = sampleArray[i] + "px"
+        }
+
+        body.appendChild(retangulo);
+
+    }
 }
